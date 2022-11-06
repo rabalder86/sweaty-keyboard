@@ -1,0 +1,41 @@
+ol {
+  color: white;
+}
+.listen {
+  box-shadow: inset 0 0 0 0 #fcfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 20px;
+  border: solid 5px rgb(255, 255, 255);
+}
+
+.disable {
+  opacity: 0;
+}
+#buttt {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  padding: 20px;
+  margin: 100px;
+  text-align: bottom;
+  text-decoration: solid;
+
+  font-size: 30px;
+  width: 1000px;
+}
+
+#but {
+  justify-content: center;
+  display: flex;
+  margin: 40px;
+}
+#sok {
+  color: rgb(0, 0, 0);
+  margin-left: 270px;
+  text-align: bottom;
+  text-decoration: solid;
+  font-size: 30px;
+  width: 1000px;
+}

@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -118,4 +118,31 @@ form .form-inner input[type='submit']:hover,
 .welcome h2 span {
   color: #ff6bff;
   font-weight: 700;
+} */
+body {
+  background-color: black;
+}
+.navbaren {
+  height: 60px;
+  background-color: white;
+  color: black;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 20px 15px 20px;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  margin: 0 0;
+  padding: 0 0;
+  opacity: 60%;
+}
+a:hover {
+  box-shadow: inset 100px 0 0 0 #000000;
+  color: white;
+  opacity: 100%;
 }
