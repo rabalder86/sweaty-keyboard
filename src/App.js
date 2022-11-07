@@ -1,10 +1,11 @@
 // import React, { useState } from "react";
 // import LoginForm from "./components/LoginForm";
 import FetchApi from "./components/Home.js";
-
+import { useCookies } from "react-cookie";
 import "./App.css";
 
 function App() {
+  const [cookies, setCookie] = useCookies(["user"]);
   // const adminUser = {
   //   email: "ngeigant@gmail.com",
   //   password: "admin",
@@ -35,7 +36,18 @@ function App() {
   //   console.log("Logout");
   //   setUser({ name: "", email: "" });
   // };
+  const d = new Date();
+  let tid = d.getTime();
+  let expireTid = tid + 60000;
+  const s = new Date(expireTid);
 
+  function handleCookie() {
+    setCookie("user", "hejhej", {
+      expires: s,
+      path: "/",
+      httpOnly: true,
+    });
+  }
   return (
     <div className="App">
       {/* {user.email !== '' ? (
@@ -49,6 +61,8 @@ function App() {
         <LoginForm Login={Login} error={error} />
       )} */}
       <FetchApi />
+      {cookies.user && <p>{cookies.user}</p>}
+      <button onClick={handleCookie}>Set Cookie</button>
     </div>
   );
 }
